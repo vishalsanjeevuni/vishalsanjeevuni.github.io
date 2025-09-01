@@ -11,7 +11,6 @@
       <span class="timeline-role">DPhil in Machine Learning</span>
       <span class="timeline-dates">Oct 2024 – <strong class="text-accent">Present</strong></span>
     </div>
-    <div class="timeline-meta">Oxford, England, United Kingdom</div>
     <div class="timeline-desc">Exploring the scaling laws of AI Safety.</div>
   </div>
 
