@@ -206,6 +206,89 @@ class LazyImageLoader {
     }
 }
 
+// Markdown content loader
+class MarkdownLoader {
+    constructor() {
+        this.sections = ['about', 'news', 'publications', 'resume'];
+        this.init();
+    }
+
+    init() {
+        // Load all markdown sections
+        this.sections.forEach(section => {
+            this.loadMarkdown(section);
+        });
+    }
+
+    async loadMarkdown(section) {
+        const contentElement = document.getElementById(`${section}-content`);
+        if (!contentElement) return;
+
+        try {
+            const response = await fetch(`${section}.md`);
+            if (!response.ok) {
+                throw new Error(`Failed to load ${section}.md: ${response.status}`);
+            }
+            
+            const markdown = await response.text();
+            const html = this.parseMarkdown(markdown);
+            contentElement.innerHTML = html;
+        } catch (error) {
+            console.error(`Error loading ${section} content:`, error);
+            contentElement.innerHTML = `
+                <div class="error-message">
+                    <p>Sorry, unable to load ${section} content at this time.</p>
+                    <p><small>Error: ${error.message}</small></p>
+                </div>
+            `;
+        }
+    }
+
+    parseMarkdown(markdown) {
+        let html = markdown;
+
+        // Convert headers
+        html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+        html = html.replace(/^## (.*$)/gim, '<h2 class="title">$1</h2>');
+        html = html.replace(/^# (.*$)/gim, '<h1 class="title">$1</h1>');
+
+        // Convert bold text
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+        // Convert italic text
+        html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+        // Convert links
+        html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="cactus-link">$1</a>');
+
+        // Convert unordered lists
+        html = html.replace(/^\s*- (.+)$/gm, '<li>$1</li>');
+        html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+
+        // Convert paragraphs (split by double newlines)
+        const paragraphs = html.split(/\n\s*\n/);
+        html = paragraphs.map(p => {
+            p = p.trim();
+            if (!p) return '';
+            
+            // Skip if already wrapped in HTML tags
+            if (p.startsWith('<') && p.endsWith('>')) return p;
+            if (p.includes('<li>') || p.includes('<h') || p.includes('<ul>') || p.includes('<div')) return p;
+            
+            return `<p>${p}</p>`;
+        }).join('\n\n');
+
+        // Clean up nested tags
+        html = html.replace(/<ul>\s*(<li>.*?<\/li>)\s*<\/ul>/gs, '<ul>$1</ul>');
+        html = html.replace(/<li><\/li>/g, '');
+
+        // Convert horizontal rules
+        html = html.replace(/^---$/gm, '<hr>');
+
+        return html;
+    }
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
@@ -214,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new SmoothScroll();
     new NavigationHighlight();
     new LazyImageLoader();
+    new MarkdownLoader();
     
     // Add loading state management
     document.body.classList.add('loaded');
