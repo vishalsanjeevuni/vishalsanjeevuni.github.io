@@ -224,24 +224,45 @@ class MarkdownLoader {
         const contentElement = document.getElementById(`${section}-content`);
         if (!contentElement) return;
 
-        try {
-            const response = await fetch(`${section}.md`);
-            if (!response.ok) {
-                throw new Error(`Failed to load ${section}.md: ${response.status}`);
+        // Try multiple path strategies for better compatibility
+        const pathsToTry = [
+            `./${section}.md`,           // Relative to current directory
+            `${section}.md`,             // Direct relative path
+            `/${section}.md`             // Absolute from root (for some GitHub Pages setups)
+        ];
+
+        let lastError = null;
+        
+        for (const fullPath of pathsToTry) {
+            try {
+                console.log(`Trying to fetch: ${fullPath}`);
+                const response = await fetch(fullPath);
+                if (response.ok) {
+                    const markdown = await response.text();
+                    const html = this.parseMarkdown(markdown);
+                    contentElement.innerHTML = html;
+                    console.log(`Successfully loaded ${section} from: ${fullPath}`);
+                    return; // Success, exit early
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+            } catch (error) {
+                console.warn(`Failed to load ${section} from ${fullPath}:`, error.message);
+                lastError = error;
+                // Continue to next path
             }
-            
-            const markdown = await response.text();
-            const html = this.parseMarkdown(markdown);
-            contentElement.innerHTML = html;
-        } catch (error) {
-            console.error(`Error loading ${section} content:`, error);
-            contentElement.innerHTML = `
-                <div class="error-message">
-                    <p>Sorry, unable to load ${section} content at this time.</p>
-                    <p><small>Error: ${error.message}</small></p>
-                </div>
-            `;
         }
+
+        // If we get here, all paths failed
+        console.error(`Error loading ${section} content - all paths failed:`, lastError);
+        console.log(`Current location: ${window.location.href}`);
+        contentElement.innerHTML = `
+            <div class="error-message">
+                <p>Sorry, unable to load ${section} content at this time.</p>
+                <p><small>Last error: ${lastError?.message || 'Unknown error'}</small></p>
+                <p><small>Tried paths: ${pathsToTry.join(', ')}</small></p>
+            </div>
+        `;
     }
 
     parseMarkdown(markdown) {
