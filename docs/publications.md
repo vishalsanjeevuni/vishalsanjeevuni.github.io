@@ -22,3 +22,24 @@
         </div>
     </div>
 </div>
+
+<div class="publication-card">
+    <div class="publication-image">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background-color: var(--color-border); color: var(--color-global-text); font-size: 2rem;">?</div>
+    </div>
+    <div class="publication-content">
+        <h3 class="publication-title">
+            <a href="#" class="publication-link">
+                Coming soon!
+            </a>
+        </h3>
+        <div class="publication-venue">Under Submission</div>
+        <div class="publication-authors">J Rosser et al.</div>
+        <div class="publication-year">2025</div>
+        <div class="publication-tags">
+            <span class="tag tag-safety">Mechanistic Interpretability</span>
+            <a href="#" class="tag tag-arxiv">ARXIV</a>
+            <a href="#" class="tag tag-github">GITHUB</a>
+        </div>
+    </div>
+</div>

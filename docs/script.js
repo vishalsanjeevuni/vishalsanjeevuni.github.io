@@ -125,8 +125,12 @@ class SmoothScroll {
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
-                    const headerHeight = 80; // Approximate header height
-                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    // Compute dynamic offset based on actual header height
+                    const header = document.getElementById('main-header');
+                    const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+                    const extraMargin = 8; // small breathing room below the header
+                    const targetRect = targetElement.getBoundingClientRect();
+                    const targetPosition = window.pageYOffset + targetRect.top - (headerHeight + extraMargin);
                     
                     // Immediately update active state for better UX
                     const sectionId = targetId.substring(1);
