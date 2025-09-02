@@ -27,6 +27,18 @@ class ThemeManager {
             themeToggle.setAttribute('aria-label', 
                 theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
             );
+            // Update icon visibility explicitly to avoid any flash
+            const sun = themeToggle.querySelector('.sun-icon');
+            const moon = themeToggle.querySelector('.moon-icon');
+            if (sun && moon) {
+                if (theme === 'dark') {
+                    sun.style.display = 'block';
+                    moon.style.display = 'none';
+                } else {
+                    sun.style.display = 'none';
+                    moon.style.display = 'block';
+                }
+            }
         }
     }
 
