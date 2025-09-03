@@ -32,7 +32,7 @@
       <span class="timeline-role">Bounty Programme</span>
       <span class="timeline-dates">Feb 2025 – Mar 2025</span>
     </div>
-    <div class="timeline-meta">Remote</div>
+    <div class="timeline-meta">Remote • Contract</div>
     <div class="timeline-desc">Investigating the automated design of agentic systems for cybersecurity benchmarks.</div>
   </div>
 
