@@ -493,6 +493,7 @@ body {
     .about-avatar {
         width: 88px;
         height: 88px;
+        margin-top: 1.5rem; /* Add padding above the avatar on mobile */
     }
     .about-header-content {
         align-items: center;
