@@ -182,6 +182,57 @@ body {
     text-decoration-thickness: 2px;
 }
 
+/* Hover color for individual 'b'/'B' letters */
+.hover-b {
+    transition: color 0.15s ease;
+}
+.hover-b:hover {
+    color: #ffd400; /* yellow */
+}
+
+/* Flying bee emoji created on clicking a 'b' */
+.flying-bee {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    font-size: 1.2em;
+    line-height: 1;
+    will-change: transform, opacity;
+    animation: bee-fly 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes bee-fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(calc(var(--dx) * 0.2), calc(var(--dy) * 0.2)) rotate(90deg);
+    }
+    40% {
+        transform: translate(calc(var(--dx) * 0.4 + 6px), calc(var(--dy) * 0.4 - 4px)) rotate(180deg);
+    }
+    60% {
+        transform: translate(calc(var(--dx) * 0.6 - 4px), calc(var(--dy) * 0.6 + 6px)) rotate(270deg);
+    }
+    80% {
+        transform: translate(calc(var(--dx) * 0.8 + 3px), calc(var(--dy) * 0.8 - 3px)) rotate(360deg);
+    }
+    100% {
+        transform: translate(var(--dx), var(--dy)) rotate(450deg);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flying-bee {
+        animation: bee-fade 250ms ease-out forwards;
+    }
+    @keyframes bee-fade {
+        to { opacity: 0; }
+    }
+}
+
 /* Header styles */
 #main-header {
     position: fixed;
