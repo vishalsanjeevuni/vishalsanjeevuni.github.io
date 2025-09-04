@@ -546,9 +546,6 @@ class PartyHatExplosion {
     }
 
     triggerExplosion() {
-        // Prevent multiple simultaneous animations
-        if (this.isAnimating) return;
-        
         // Check if user prefers reduced motion
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReducedMotion) {
@@ -563,8 +560,6 @@ class PartyHatExplosion {
             return;
         }
         
-        this.isAnimating = true;
-        
         // Get logo position for explosion origin
         const logoSvg = document.querySelector('#main-header svg');
         if (!logoSvg) return;
@@ -572,36 +567,36 @@ class PartyHatExplosion {
         const logoRect = logoSvg.getBoundingClientRect();
         const centerX = logoRect.left + logoRect.width / 2;
         const centerY = logoRect.top + logoRect.height / 2;
+        const explosionId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
         
         // Add pulse animation to logo
         logoSvg.classList.add('logo-party-pulse');
         
         // Create party hats explosion
-        this.createPartyHats(centerX, centerY);
+        this.createPartyHats(centerX, centerY, explosionId);
         
         // Create sparkles
-        this.createSparkles(centerX, centerY);
+        this.createSparkles(centerX, centerY, explosionId);
         
         // Clean up after animation
         setTimeout(() => {
             logoSvg.classList.remove('logo-party-pulse');
-            this.isAnimating = false;
-            // Clean up any remaining elements
-            this.cleanupExplosionElements();
+            // Clean up any remaining elements for this explosion only
+            this.cleanupExplosionElements(explosionId);
         }, 2500);
     }
 
-    cleanupExplosionElements() {
-        // Remove any remaining party hats
-        const remainingHats = document.querySelectorAll('.party-hat');
+    cleanupExplosionElements(explosionId) {
+        // Remove any remaining party hats for this explosion
+        const remainingHats = document.querySelectorAll(`.party-hat[data-explosion="${explosionId}"]`);
         remainingHats.forEach(hat => {
             if (hat.parentNode) {
                 hat.parentNode.removeChild(hat);
             }
         });
         
-        // Remove any remaining sparkles
-        const remainingSparkles = document.querySelectorAll('.party-sparkle');
+        // Remove any remaining sparkles for this explosion
+        const remainingSparkles = document.querySelectorAll(`.party-sparkle[data-explosion="${explosionId}"]`);
         remainingSparkles.forEach(sparkle => {
             if (sparkle.parentNode) {
                 sparkle.parentNode.removeChild(sparkle);
@@ -609,13 +604,14 @@ class PartyHatExplosion {
         });
     }
 
-    createPartyHats(centerX, centerY) {
+    createPartyHats(centerX, centerY, explosionId) {
         const hatCount = 12; // Number of party hats to create
         const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd'];
         
         for (let i = 0; i < hatCount; i++) {
             const hat = document.createElement('div');
             hat.className = 'party-hat';
+            hat.setAttribute('data-explosion', explosionId);
             
             // Create party hat SVG
             hat.innerHTML = this.getPartyHatSVG(colors[i % colors.length]);
@@ -652,12 +648,13 @@ class PartyHatExplosion {
         }
     }
 
-    createSparkles(centerX, centerY) {
+    createSparkles(centerX, centerY, explosionId) {
         const sparkleCount = 20;
         
         for (let i = 0; i < sparkleCount; i++) {
             const sparkle = document.createElement('div');
             sparkle.className = 'party-sparkle';
+            sparkle.setAttribute('data-explosion', explosionId);
             
             // Random colors for sparkles
             const hue = Math.random() * 360;
