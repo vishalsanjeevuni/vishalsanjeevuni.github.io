@@ -12,7 +12,7 @@
                 AgentBreeder: Mitigating the AI Safety Impact of Multi-Agent Scaffolds via Self-Improvement
             </a>
         </h3>
-        <div class="publication-venue">ICLR 2025 Workshop Oral: Scaling Self-Improving Foundation Models without Human Supervision</div>
+        <div class="publication-venue">NeurIPS 2025 (spotlight)</div>
         <div class="publication-authors">J Rosser, Jakob Foerster</div>
         <div class="publication-year">2025</div>
         <div class="publication-tags">
