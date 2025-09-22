@@ -8,11 +8,11 @@
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://arxiv.org/abs/2502.00757" class="publication-link">
+            <a href="/AgentBreeder" class="publication-link">
                 AgentBreeder: Mitigating the AI Safety Impact of Multi-Agent Scaffolds via Self-Improvement
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 (spotlight)</div>
+        <div class="publication-venue">NeurIPS 2025 spotlight</div>
         <div class="publication-authors">J Rosser, Jakob Foerster</div>
         <div class="publication-year">2025</div>
         <div class="publication-tags">
