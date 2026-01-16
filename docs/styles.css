@@ -11,29 +11,29 @@ html {
 
 /* CSS Custom Properties for theming */
 :root {
-    /* Light theme colors (inspired by astro-theme-cactus) */
-    --color-global-bg: oklch(98.48% 0 0);
-    --color-global-text: oklch(26.99% 0.0096 235.05);
-    --color-link: oklch(55.44% 0.0431 185.69);
-    --color-accent: #af67ff;
-    --color-accent-2: oklch(18.15% 0 0);
-    --color-quote: #af67ff;
-    --color-border: #e5e7eb;
-    --color-card-bg: rgba(255, 255, 255, 0.8);
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    /* Light theme colors - Professional Blue/Teal for Data Analytics */
+    --color-global-bg: #f8fafc;
+    --color-global-text: #1e293b;
+    --color-link: #0369a1;
+    --color-accent: #0891b2;
+    --color-accent-2: #0f172a;
+    --color-quote: #0891b2;
+    --color-border: #e2e8f0;
+    --color-card-bg: rgba(255, 255, 255, 0.9);
+    --color-shadow: rgba(0, 0, 0, 0.08);
 }
 
 /* Dark theme colors */
 [data-theme="dark"] {
-    --color-global-bg: oklch(23.64% 0.0045 248);
-    --color-global-text: oklch(83.54% 0 264);
-    --color-link: oklch(70.44% 0.1133 349);
-    --color-accent: #5ff26b;
-    --color-accent-2: oklch(94.66% 0 0);
-    --color-quote: oklch(94.8% 0.106 136.49);
-    --color-border: #374151;
-    --color-card-bg: rgba(31, 41, 55, 0.8);
-    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-global-bg: #0f172a;
+    --color-global-text: #e2e8f0;
+    --color-link: #38bdf8;
+    --color-accent: #22d3ee;
+    --color-accent-2: #f1f5f9;
+    --color-quote: #22d3ee;
+    --color-border: #334155;
+    --color-card-bg: rgba(30, 41, 59, 0.9);
+    --color-shadow: rgba(0, 0, 0, 0.4);
 }
 
 /* Base typography */
