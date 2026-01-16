@@ -1,6 +1,6 @@
 # Vishal Sanjeevuni - Portfolio
 
-A clean, modern portfolio website for showcasing data analytics projects and professional experience.
+A clean, modern portfolio website for showcasing data engineering projects and professional experience.
 
 ## Live Site
 

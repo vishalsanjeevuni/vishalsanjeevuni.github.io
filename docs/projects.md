@@ -1,101 +1,79 @@
 # Projects
 
-A selection of data analytics projects showcasing my expertise in data analysis, visualization, and insights generation.
+Production data pipelines and analytics systems I've built.
 
 ---
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/screenshot.png" alt="Sales Analytics Dashboard">
+        <img src="assets/screenshot.png" alt="E-commerce Analytics Pipeline">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="#" class="publication-link">
-                Sales Performance Analytics Dashboard
-            </a>
-        </h3>
-        <div class="publication-venue">Business Intelligence</div>
-        <div class="publication-authors">End-to-end dashboard tracking KPIs, revenue trends, and regional performance</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-description">
-            Built an interactive Tableau dashboard analyzing $50M+ in annual sales data. Identified seasonal patterns that led to 15% improvement in inventory planning. Integrated real-time data refresh with automated ETL pipelines.
-        </div>
-        <div class="publication-tags">
-            <span class="tag tag-conference">Tableau</span>
-            <span class="tag tag-interpretability">SQL</span>
-            <span class="tag tag-arxiv">Python</span>
-        </div>
-    </div>
-</div>
-
-<div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/screenshot.png" alt="Customer Segmentation Analysis">
-    </div>
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="#" class="publication-link">
-                Customer Segmentation & Churn Prediction
-            </a>
-        </h3>
-        <div class="publication-venue">Predictive Analytics</div>
-        <div class="publication-authors">Machine learning model to identify at-risk customers and personalize retention strategies</div>
-        <div class="publication-year">2024</div>
-        <div class="publication-description">
-            Developed a customer segmentation model using K-means clustering and built a churn prediction model with 87% accuracy. Analysis led to targeted retention campaigns that reduced churn by 12%.
-        </div>
-        <div class="publication-tags">
-            <span class="tag tag-interpretability">Python</span>
-            <span class="tag tag-safety">Scikit-learn</span>
-            <span class="tag tag-workshop">Pandas</span>
-        </div>
-    </div>
-</div>
-
-<div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/screenshot.png" alt="Financial Reporting Automation">
-    </div>
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="#" class="publication-link">
-                Automated Financial Reporting System
+            <a href="https://github.com/vishalsanjeevuni/Multi-Source-E-commerce-Analytics-Pipeline" class="publication-link">
+                E-commerce Analytics Pipeline
             </a>
         </h3>
         <div class="publication-venue">Data Engineering</div>
-        <div class="publication-authors">Streamlined monthly reporting from 40+ hours to 2 hours with automated pipelines</div>
-        <div class="publication-year">2024</div>
+        <div class="publication-authors">End-to-end pipeline ingesting from Shopify, WooCommerce, and Amazon with ML-driven customer segmentation</div>
         <div class="publication-description">
-            Designed and implemented an automated reporting system using Python and SQL. Created reusable templates and scheduled jobs that reduced manual effort by 95% while improving data accuracy.
+            Built a production data pipeline with multi-platform connectors, Airflow orchestration, dbt transformations, and ML-powered insights using RFM analysis and Isolation Forest for anomaly detection. Handles 1M+ records daily with 85% reduction in manual reporting time.
         </div>
         <div class="publication-tags">
             <span class="tag tag-interpretability">Python</span>
-            <span class="tag tag-conference">Power BI</span>
-            <span class="tag tag-arxiv">SQL Server</span>
+            <span class="tag tag-conference">Airflow</span>
+            <span class="tag tag-arxiv">dbt</span>
+            <span class="tag tag-safety">PostgreSQL</span>
+            <span class="tag tag-workshop">FastAPI</span>
         </div>
     </div>
 </div>
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/screenshot.png" alt="Marketing Attribution Analysis">
+        <img src="coinflow-architecture.png" alt="Coinflow Dashboard">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="#" class="publication-link">
-                Multi-Touch Marketing Attribution Model
+                Coinflow — Personal Finance ETL Dashboard
             </a>
         </h3>
-        <div class="publication-venue">Marketing Analytics</div>
-        <div class="publication-authors">Data-driven attribution model to optimize marketing spend across channels</div>
-        <div class="publication-year">2023</div>
+        <div class="publication-venue">Full-Stack Data Pipeline</div>
+        <div class="publication-authors">Ingests bank transactions from multiple Canadian financial institutions with AI-assisted categorization</div>
         <div class="publication-description">
-            Built a multi-touch attribution model analyzing customer journeys across 8 marketing channels. Insights led to 23% improvement in marketing ROI through optimized budget allocation.
+            Full-stack pipeline that normalizes inconsistent CSV/XLSX formats from Scotia, Capital One, PC Financial, and MBNA. Features bank-specific transformers, MD5 deduplication, two-level taxonomy with 50+ categories, and real-time analytics dashboard.
         </div>
         <div class="publication-tags">
-            <span class="tag tag-interpretability">SQL</span>
-            <span class="tag tag-conference">Google Analytics</span>
-            <span class="tag tag-workshop">Excel</span>
+            <span class="tag tag-conference">FastAPI</span>
+            <span class="tag tag-interpretability">React</span>
+            <span class="tag tag-arxiv">Pandas</span>
+            <span class="tag tag-safety">OpenAI API</span>
+        </div>
+    </div>
+</div>
+
+<div class="publication-card">
+    <div class="publication-image">
+        <img src="assets/screenshot.png" alt="WeatherStream Pipeline">
+    </div>
+    <div class="publication-content">
+        <h3 class="publication-title">
+            <a href="https://github.com/vishalsanjeevuni/WeatherStream-Pipeline" class="publication-link">
+                WeatherStream Pipeline
+            </a>
+        </h3>
+        <div class="publication-venue">Real-time Streaming</div>
+        <div class="publication-authors">Streaming weather data pipeline with Kafka ingestion and analytics</div>
+        <div class="publication-description">
+            Real-time pipeline using Python and Confluent Kafka ingesting from OpenWeatherMap API. Custom producer/consumer architecture with AWS RDS PostgreSQL storage, dbt transformations for daily/hourly aggregations, containerized with Docker and deployed to AWS Fargate.
+        </div>
+        <div class="publication-tags">
+            <span class="tag tag-interpretability">Python</span>
+            <span class="tag tag-safety">Kafka</span>
+            <span class="tag tag-arxiv">dbt</span>
+            <span class="tag tag-conference">AWS Fargate</span>
+            <span class="tag tag-workshop">Docker</span>
         </div>
     </div>
 </div>
