@@ -5,9 +5,6 @@ Production data pipelines and analytics systems I've built.
 ---
 
 <div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/screenshot.png" alt="E-commerce Analytics Pipeline">
-    </div>
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="https://github.com/vishalsanjeevuni/Multi-Source-E-commerce-Analytics-Pipeline" class="publication-link">
@@ -30,9 +27,6 @@ Production data pipelines and analytics systems I've built.
 </div>
 
 <div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/coinflow-architecture.png" alt="Coinflow Dashboard">
-    </div>
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="#" class="publication-link">
@@ -54,9 +48,6 @@ Production data pipelines and analytics systems I've built.
 </div>
 
 <div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/screenshot.png" alt="WeatherStream Pipeline">
-    </div>
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="https://github.com/vishalsanjeevuni/WeatherStream-Pipeline" class="publication-link">
