@@ -51,7 +51,7 @@ Production data pipelines and analytics systems I've built.
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="https://github.com/vishalsanjeevuni/WeatherStream-Pipeline" class="publication-link">
-                WeatherStream Pipeline
+                Real-Time Weather Data Pipeline
             </a>
         </h3>
         <div class="publication-venue">Real-time Streaming</div>
