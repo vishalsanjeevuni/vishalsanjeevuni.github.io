@@ -2,7 +2,7 @@
 
 Production data pipelines and analytics systems I've built.
 
----
+## 2025
 
 <div class="publication-card">
     <div class="publication-content">
