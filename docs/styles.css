@@ -36,6 +36,13 @@ html {
     --color-shadow: rgba(0, 0, 0, 0.4);
 }
 
+/* Theme-aware logo switching */
+.logo-dark { display: block; }
+.logo-light { display: none; }
+
+[data-theme="light"] .logo-dark { display: none; }
+[data-theme="light"] .logo-light { display: block; }
+
 /* Base typography */
 body {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
