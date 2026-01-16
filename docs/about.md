@@ -25,4 +25,4 @@ With expertise in **Python**, **SQL**, and modern data tools like **dbt**, **Apa
 
 My experience spans **Azure** and **AWS** cloud platforms, where I've built high-performance NLP pipelines, automated legacy data integrations, and implemented robust monitoring frameworks to ensure data quality at scale.
 
-Currently at **UNICEF Canada** as a Senior Data Analyst, previously engineered data solutions at **Kingsdale Advisors**, from building BERT-powered matching pipelines to developing scalable ETL solutions in Azure Data Factory and Databricks.
+Currently at **UNICEF Canada** as a Senior Data Analyst, previously engineered data solutions in **Financial Services**, from building BERT-powered matching pipelines to developing scalable ETL solutions in Azure Data Factory and Databricks.
