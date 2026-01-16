@@ -31,7 +31,7 @@ Production data pipelines and analytics systems I've built.
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="coinflow-architecture.png" alt="Coinflow Dashboard">
+        <img src="assets/coinflow-architecture.png" alt="Coinflow Dashboard">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
