@@ -1,5 +1,8 @@
 # Vishal Sanjeevuni - Portfolio
 
+> Nov 2026: the live site now redirects to https://github.com/vishalsanjeevuni while a new site is planned. The original pages are kept in `docs/` (about.md, projects.md, resume.md, script.js, styles.css); restore `docs/index.html` from git history to bring the site back.
+
+
 A clean, modern portfolio website for showcasing data engineering projects and professional experience.
 
 ## Live Site
