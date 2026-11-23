@@ -1,30 +1,8 @@
 # Projects
 
-Production data pipelines and analytics systems I've built.
+Data pipelines and applications I've built on my own time.
 
 ## 2025
-
-<div class="publication-card">
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://github.com/vishalsanjeevuni/Multi-Source-E-commerce-Analytics-Pipeline" class="publication-link">
-                E-commerce Analytics Pipeline
-            </a>
-        </h3>
-        <div class="publication-venue">Data Engineering</div>
-        <div class="publication-authors">End-to-end pipeline ingesting from Shopify, WooCommerce, and Amazon with ML-driven customer segmentation</div>
-        <div class="publication-description">
-            Built a production data pipeline with multi-platform connectors, Airflow orchestration, dbt transformations, and ML-powered insights using RFM analysis and Isolation Forest for anomaly detection. Handles 1M+ records daily with 85% reduction in manual reporting time.
-        </div>
-        <div class="publication-tags">
-            <span class="tag tag-interpretability">Python</span>
-            <span class="tag tag-conference">Airflow</span>
-            <span class="tag tag-arxiv">dbt</span>
-            <span class="tag tag-safety">PostgreSQL</span>
-            <span class="tag tag-workshop">FastAPI</span>
-        </div>
-    </div>
-</div>
 
 <div class="publication-card">
     <div class="publication-content">
@@ -52,7 +30,7 @@ Production data pipelines and analytics systems I've built.
     <div class="publication-content">
         <h3 class="publication-title">
             <a href="#" class="publication-link">
-                Coinflow — Personal Finance ETL Dashboard
+                Coinflow: Personal Finance ETL Dashboard
             </a>
         </h3>
         <div class="publication-venue">Full-Stack Data Pipeline</div>

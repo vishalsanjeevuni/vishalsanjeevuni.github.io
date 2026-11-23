@@ -19,10 +19,8 @@
   </div>
 </div>
 
-I'm a **Data Engineer** based in Toronto, building production data pipelines, cloud infrastructure, and analytics systems.
+I'm a **Data Engineer** based in Toronto. I build and run data pipelines and data models in **SQL** and **Python**, across CRM, marketing, ad platform and financial data.
 
-With expertise in **Python**, **SQL**, and modern data tools like **dbt**, **Apache Airflow**, and **Kafka**, I specialize in designing scalable ETL/ELT pipelines that transform raw data into actionable insights.
+Day to day that means data integration, data modeling, incremental loads, identity matching and data validation on **Azure** and **AWS**. My personal projects use **dbt** and **Kafka**.
 
-My experience spans **Azure** and **AWS** cloud platforms, where I've built high-performance NLP pipelines, automated legacy data integrations, and implemented robust monitoring frameworks to ensure data quality at scale.
-
-Currently at **UNICEF Canada** as a Senior Data Analyst, previously engineered data solutions in **Financial Services**, from building BERT-powered matching pipelines to developing scalable ETL solutions in Azure Data Factory and Databricks.
+Currently a **Senior Data Engineer** at **UNICEF Canada**, working on the integrations between the CRM, the marketing platform and the data warehouse. Previously, in **Financial Services**, I trained a record-matching model and built the application around it, which took most of the manual work out of a recurring data preparation process.
