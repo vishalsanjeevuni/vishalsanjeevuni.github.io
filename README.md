@@ -26,7 +26,6 @@ docs/
 ├── about.md        # About section content
 ├── projects.md     # Projects/portfolio content
 ├── skills.md       # Technical skills content
-├── resume.md       # Resume/experience content
 └── assets/         # Images and other assets
     └── profile.jpg # Profile photo
 ```
@@ -36,7 +35,6 @@ docs/
 1. **Personal Info**: Edit `about.md` to update bio and social links
 2. **Projects**: Edit `projects.md` to add your data analytics projects
 3. **Skills**: Edit `skills.md` to update your technical skills
-4. **Resume**: Edit `resume.md` to add your work experience
 5. **Styling**: Modify `styles.css` to change colors and fonts
 6. **Profile Photo**: Replace `docs/assets/profile.jpg` with your photo
 
@@ -58,7 +56,6 @@ docs/
 - Smooth scrolling navigation
 - Markdown content loading
 - Project showcase cards
-- Timeline-based resume
 - Skills grid layout
 
 ## Tech Stack

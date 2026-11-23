@@ -23,4 +23,4 @@ I'm a **Data Engineer** based in Toronto. I build and run data pipelines and dat
 
 Day to day that means data integration, data modeling, incremental loads, identity matching and data validation on **Azure** and **AWS**. My personal projects use **dbt** and **Kafka**.
 
-Currently a **Senior Data Engineer** at **UNICEF Canada**, working on the integrations between the CRM, the marketing platform and the data warehouse. Previously, in **Financial Services**, I trained a record-matching model and built the application around it, which took most of the manual work out of a recurring data preparation process.
+My current role and work history are on [LinkedIn](https://linkedin.com/in/vishal-sanjeevuni).
